@@ -14,3 +14,4 @@ pinyin_simp.userdb/*
 others
 
 .venv/
+build/
