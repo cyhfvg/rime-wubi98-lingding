@@ -2,15 +2,15 @@
 # encoding: utf-8
 
 schema:
-  schema_id: wubi86_jidian
-  name: "极点五笔86"
+  schema_id: wubi98
+  name: "五笔98"
   version: "1.0"
-  icon: "wubi86_jidian.ico"           # string 方案图标，格式： .ico
+  # icon: "wubi86_jidian.ico"           # string 方案图标，格式： .ico
   ascii_icon:                         # string
   author:
     - 创始人 王永民先生
   description: |
-    五笔字形 86 极点极爽版，方案由 KyleBing 修改 - 2019年11月08日 10:26
+    五笔字形 98 ，方案基于 KyleBing 的 wubi98_jidian 修改而来 - 2024年05月01日
   dependencies:
 #    - pinyin_simp
 
@@ -66,7 +66,7 @@ speller:
 #  auto_clear: max_length                # 空码时自动清空
 
 translator:
-  dictionary: wubi86_jidian             # 翻译器将调取此字典文件
+  dictionary: wubi98             # 翻译器将调取此字典文件
   enable_charset_filter: true           # 开启字符集过滤
   enable_completion: true               # 是否显示编码未输入完整的词条
 
