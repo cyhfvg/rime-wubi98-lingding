@@ -56,6 +56,8 @@ patch:
       # - { when: has_menu, accept: bracketright, send: Page_Down }
       - { when: has_menu, accept: Control+b, send: Page_Up }
       - { when: has_menu, accept: Control+f, send: Page_Down }
+      - { when: has_menu, accept: Control+u, send: Page_Up }
+      - { when: has_menu, accept: Control+d, send: Page_Down }
 
       # 上下翻页 - =
 #      - { when: has_menu, accept: minus, send: Page_Up }
