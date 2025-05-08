@@ -117,4 +117,23 @@ patch:
       candidate_text_color: 0x000000
       comment_text_color: 0xBBCC27
 
+    purity_of_form_custom: # rime-ice
+      name: "純粹的形式／Purity of Form Custom"
+      author: 雨過之後、佛振
+      creat_time: "copy from rime-ice; 20250508"
+      text_color: 0x808080
+      back_color: 0x545554
+      label_color: 0xBBBBBB
+      border_color: 0x545554
+      shadow_color: 0xb4000000
+      comment_text_color: 0x808080
+      candidate_text_color: 0xEEEEEE
+      hilited_text_color: 0xEEEEEE
+      hilited_comment_text_color: 0x808080
+      hilited_candidate_back_color: 0xE3E3E3
+      hilited_candidate_border_color: 0xE3E3E3
+      hilited_candidate_label_color: 0x4C4C4C
+      hilited_candidate_text_color: 0x000000
+
   style/layout/border_width: 1
+
