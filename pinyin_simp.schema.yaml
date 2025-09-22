@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 schema:
-  schema_id: pinyin_simp
+  schema_id: pinyin_ice
   name: '简体拼音'
   version: "0.8"
   author:
