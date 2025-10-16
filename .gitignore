@@ -12,3 +12,7 @@ user.txt
 pinyin_simp.userdb/*
 
 others
+
+.venv/
+build/
+.place_holder
