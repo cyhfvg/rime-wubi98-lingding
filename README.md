@@ -34,7 +34,14 @@ sudo apt-get install ibus-rime
 
 ubuntu 的配置文件目录在
 ```bash
+# ibus
 ~/.config/ibus/rime/
+
+# fcitx
+~/.config/fcitx/rim
+
+# fcitx5
+~/.local/share/fcitx5/rime
 ```
 
 ### Android
