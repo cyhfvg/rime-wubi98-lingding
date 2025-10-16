@@ -1,0 +1,16 @@
+---
+name: extra_dict
+version: "20251014"
+last_edit_time: "2025-10-16"
+sort: by_weight
+import_tables:
+  # 额外词库在此处导入
+  - wubi98_extra
+
+columns:    # 码表格式
+  - text    # 文字
+  - code    # 输入码
+  - weight  # 权重
+  - stem
+
+...
