@@ -40,7 +40,7 @@
       ],
     },
     enter: {
-      size: { width: 50, height: 53 },
+      size: { width: 70, height: 63 },
       selectedIndex: 0,
       list: [
         { action: { shortcut: '#换行' }, label: { text: 'Return' }, fontSize: 16 },

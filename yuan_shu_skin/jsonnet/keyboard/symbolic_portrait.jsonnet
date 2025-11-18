@@ -1,3 +1,5 @@
+// 符号-竖屏
+//
 local animation = import '../lib/animation.libsonnet';
 local center = import '../lib/center.libsonnet';
 local collectionData = import '../lib/collectionData.libsonnet';

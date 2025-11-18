@@ -1,3 +1,6 @@
+// 中文26键-竖屏
+//
+
 local animation = import '../lib/animation.libsonnet';
 local center = import '../lib/center.libsonnet';
 local color = import '../lib/color.libsonnet';
@@ -201,8 +204,8 @@ local keyboard(theme, orientation) =
     aButton: createButton(
       params={
         key: 'a',
-        size: std.get(ButtonSize, 'a键size'),
-        bounds: std.get(ButtonSize, 'a键bounds'),
+        size: std.get(ButtonSize, '普通键size'),
+        // bounds: std.get(ButtonSize, 'a键bounds'),
       }
     ),
 
@@ -306,8 +309,8 @@ local keyboard(theme, orientation) =
     lButton: createButton(
       params={
         key: 'l',
-        size: std.get(ButtonSize, 'l键size'),
-        bounds: std.get(ButtonSize, 'l键bounds'),
+        size: std.get(ButtonSize, '普通键size'),
+        // bounds: std.get(ButtonSize, 'l键bounds'),
       }
     ),
 
@@ -316,6 +319,19 @@ local keyboard(theme, orientation) =
       foregroundStyle: 'lButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'lButtonSwipeUpHintForegroundStyle',
     },
+
+    mButton: createButton(
+      params={
+        key: 'm',
+        size: std.get(ButtonSize, '普通键size'),
+      }
+    ),
+    mButtonHintStyle: {
+      backgroundStyle: 'alphabeticHintBackgroundStyle',
+      foregroundStyle: 'mButtonHintForegroundStyle',
+      swipeUpForegroundStyle: 'mButtonSwipeUpHintForegroundStyle',
+    },
+
     shiftButton: createButton(
       params={
         key: 'shift',
@@ -357,18 +373,6 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    zButton: createButton(
-      params={
-        key: 'z',
-        size: std.get(ButtonSize, '普通键size'),
-      }
-    ),
-
-    zButtonHintStyle: {
-      backgroundStyle: 'alphabeticHintBackgroundStyle',
-      foregroundStyle: 'zButtonHintForegroundStyle',
-      swipeUpForegroundStyle: 'zButtonSwipeUpHintForegroundStyle',
-    },
 
     xButton: createButton(
       params={
@@ -435,18 +439,6 @@ local keyboard(theme, orientation) =
       swipeUpForegroundStyle: 'nButtonSwipeUpHintForegroundStyle',
     },
 
-    mButton: createButton(
-      params={
-        key: 'm',
-        size: std.get(ButtonSize, '普通键size'),
-      }
-    ),
-
-    mButtonHintStyle: {
-      backgroundStyle: 'alphabeticHintBackgroundStyle',
-      foregroundStyle: 'mButtonHintForegroundStyle',
-      swipeUpForegroundStyle: 'mButtonSwipeUpHintForegroundStyle',
-    },
     backspaceButton: createButton(
       params={
         key: 'backspace',
@@ -456,7 +448,6 @@ local keyboard(theme, orientation) =
         isLetter: false,
       }
     ),
-
     backspaceButtonForegroundStyle: utils.makeSystemImageStyle(
       params={
         systemImageName: 'delete.left',
@@ -467,24 +458,27 @@ local keyboard(theme, orientation) =
         // center: { y: 0.53 },
       }
     ),
-    symbolButton: createButton(
-      params={
-        key: 'symbol',
-        size: ButtonSize['symbol键size'],
-        action: { keyboardType: 'symbolic' },
-        isLetter: false,
-      }
-    ),
 
-    symbolButtonForegroundStyle: utils.makeTextStyle(
-      params={
-        text: '#+=',
-        normalColor: color[theme]['按键前景颜色'],
-        highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'] - 3,
-        center: center['功能键前景文字偏移'] { y: 0.5 },
-      }
-    ),
+// symbolButton 不需要，暂时保留原配置 {{{1
+//    symbolButton: createButton(
+//      params={
+//        key: 'symbol',
+//        size: ButtonSize['symbol键size'],
+//        action: { keyboardType: 'symbolic' },
+//        isLetter: false,
+//      }
+//    ),
+//
+//    symbolButtonForegroundStyle: utils.makeTextStyle(
+//      params={
+//        text: '#+=',
+//        normalColor: color[theme]['按键前景颜色'],
+//        highlightColor: color[theme]['按键前景颜色'],
+//        fontSize: fontSize['按键前景文字大小'] - 3,
+//        center: center['功能键前景文字偏移'] { y: 0.5 },
+//      }
+//    ),
+// }}}
 
     '123Button': createButton(
       params={
@@ -497,7 +491,7 @@ local keyboard(theme, orientation) =
 
     '123ButtonForegroundStyle': utils.makeTextStyle(
       params={
-        text: '123',
+        text: 'Nu/Ch',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
@@ -586,6 +580,19 @@ local keyboard(theme, orientation) =
       }
     ),
 
+    zButton: createButton(
+      params={
+        key: 'z',
+        size: std.get(ButtonSize, '普通键size'),
+      }
+    ),
+
+    zButtonHintStyle: {
+      backgroundStyle: 'alphabeticHintBackgroundStyle',
+      foregroundStyle: 'zButtonHintForegroundStyle',
+      swipeUpForegroundStyle: 'zButtonSwipeUpHintForegroundStyle',
+    },
+
     enterButton: createButton(
       params={
         key: 'enter',
@@ -596,12 +603,12 @@ local keyboard(theme, orientation) =
     ) + {
       backgroundStyle: [
         {
-          styleName: 'systemButtonBackgroundStyle',
+          styleName: 'enterButtonGreyBackgroundStyle',
           conditionKey: '$returnKeyType',
           conditionValue: [0, 2, 3, 5, 8, 10, 11],
         },
         {
-          styleName: 'enterButtonBlueBackgroundStyle',
+          styleName: 'systemButtonBackgroundStyle',
           conditionKey: '$returnKeyType',
           conditionValue: [1, 4, 6, 7, 9],
         },
@@ -645,7 +652,7 @@ local keyboard(theme, orientation) =
 
     enterButtonForegroundStyle0: utils.makeTextStyle(
       params={
-        text: '回车',
+        text: 'Return',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
@@ -654,7 +661,7 @@ local keyboard(theme, orientation) =
     ),
     enterButtonForegroundStyle6: utils.makeTextStyle(
       params={
-        text: '搜索',
+        text: 'Search',
         normalColor: color[theme]['长按选中字体颜色'],
         highlightColor: color[theme]['长按非选中字体颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
@@ -664,7 +671,7 @@ local keyboard(theme, orientation) =
 
     enterButtonForegroundStyle7: utils.makeTextStyle(
       params={
-        text: '发送',
+        text: 'Send',
         normalColor: color[theme]['长按选中字体颜色'],
         highlightColor: color[theme]['长按非选中字体颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
@@ -674,7 +681,7 @@ local keyboard(theme, orientation) =
 
     enterButtonForegroundStyle14: utils.makeTextStyle(
       params={
-        text: '前往',
+        text: 'Goto',
         normalColor: color[theme]['长按选中字体颜色'],
         highlightColor: color[theme]['长按非选中字体颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
@@ -684,11 +691,24 @@ local keyboard(theme, orientation) =
 
     enterButtonForegroundStyle9: utils.makeTextStyle(
       params={
-        text: '完成',
+        text: 'Finish',
         normalColor: color[theme]['长按选中字体颜色'],
         highlightColor: color[theme]['长按非选中字体颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
         center: center['功能键前景文字偏移'],
+      }
+    ),
+
+    // TODO: 更改回车键的颜色
+    enterButtonGreyBackgroundStyle: utils.makeGeometryStyle(
+      params={
+        buttonStyleType: 'geometry',
+        insets: { top: 5, left: 3, bottom: 5, right: 3 },
+        normalColor: color[theme]['按键前景颜色'],
+        highlightColor: color[theme]['按键前景颜色'],
+        cornerRadius: 7,
+        normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
+        highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
       }
     ),
 

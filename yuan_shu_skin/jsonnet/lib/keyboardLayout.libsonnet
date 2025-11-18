@@ -30,6 +30,7 @@ local keyboarLayout(theme="light") = {
             { Cell: 'jButton' },
             { Cell: 'kButton' },
             { Cell: 'lButton' },
+            { Cell: 'mButton' },
           ],
         },
       },
@@ -37,13 +38,13 @@ local keyboarLayout(theme="light") = {
         HStack: {
           subviews: [
             { Cell: 'shiftButton' },
-            { Cell: 'zButton' },
+            // { Cell: 'zButton' },
             { Cell: 'xButton' },
             { Cell: 'cButton' },
             { Cell: 'vButton' },
             { Cell: 'bButton' },
             { Cell: 'nButton' },
-            { Cell: 'mButton' },
+            // { Cell: 'mButton' },
             { Cell: 'backspaceButton' },
           ],
         },
@@ -51,10 +52,11 @@ local keyboarLayout(theme="light") = {
       {
         HStack: {
           subviews: [
-            { Cell: 'symbolButton' },
+            // { Cell: 'symbolButton' },
             { Cell: '123Button' },
             { Cell: 'spaceButton' },
-            { Cell: 'spaceRightButton' },
+            // { Cell: 'spaceRightButton' },
+            { Cell: 'zButton' },
             { Cell: 'enterButton' },
           ],
         },
@@ -265,10 +267,10 @@ local keyboarLayout(theme="light") = {
             { Cell: 'symbolButton' },
             { Cell: '123Button' },
             { Cell: 'spaceButton' },
-            { Cell: 'spaceRightButton' },
-            {
-              "Cell": "EnZhButton"
-            },
+            // { Cell: 'spaceRightButton' },
+            // {
+            //   "Cell": "EnZhButton"
+            // },
             { Cell: 'enterButton' },
           ],
         },
@@ -460,12 +462,12 @@ local keyboarLayout(theme="light") = {
     },
     'shift键size': {
       width: {
-        percentage: 0.15,
+        percentage: 0.20,
       },
     },
     'backspace键size': {
       width: {
-        percentage: 0.15,
+        percentage: 0.30,
       },
     },
     'symbol键size': {
@@ -475,12 +477,12 @@ local keyboarLayout(theme="light") = {
     },
     '123键size': {
       width: {
-        percentage: 0.115,
+        percentage: 0.2,
       },
     },
     'space键size': {
       width: {
-        percentage: 0.435,
+        percentage: 0.5,
       },
     },
     'spaceRight键size': {
