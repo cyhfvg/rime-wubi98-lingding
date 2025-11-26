@@ -7,7 +7,22 @@
 
   */
   pinyin: {
+    // 第二行 {{{1
+    a: {
+      selectedIndex: 0,
+      list: [
+        { action: { shortcut: '#左手模式' }, label: { text: 'left' }, fontSize: 16 },
+      ],
+    },
+    m: {
+      selectedIndex: 0,
+      list: [
+        { action: { shortcut: '#右手模式' }, label: { text: 'right' }, fontSize: 16 },
+      ],
+    },
+    // }}}
 
+    // 第三行 {{{3
     v: {
       selectedIndex: 0,
       list: [
@@ -26,19 +41,9 @@
         {'action': { 'symbol': '>' }, 'label': { 'text': '>' }, 'processByRIME': 'true'},
       ],
     },
+    // }}}
 
-    '123': {
-      selectedIndex: 1,
-      size: { width: 40, height: 53 },
-      list: [
-        { action: { symbol: '+' }, label: { text: '+' } },
-        { action: { symbol: '-' }, label: { text: '-' } },
-        { action: { symbol: '=' }, label: { text: '=' } },
-        { action: { symbol: '×' }, label: { text: '×' } },
-        { action: { symbol: '÷' }, label: { text: '÷' } },
-        { action: { symbol: '√' }, label: { text: '√' } },
-      ],
-    },
+    // 第四行 {{{4
     enter: {
       size: { width: 70, height: 63 },
       selectedIndex: 0,
@@ -46,12 +51,8 @@
         { action: { shortcut: '#换行' }, label: { text: 'Return' }, fontSize: 16 },
       ],
     },
-    symbol: {
-      selectedIndex: 0,
-      list: [
-        { action: 'nextKeyboard', label: { systemImageName: 'globe' } },
-      ],
-    },
+    // }}}
+
     // 其他可用字段名:
     // 除上方已经出现的剩下26字母,
     // "backspace"(不推荐),

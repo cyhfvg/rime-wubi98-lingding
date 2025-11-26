@@ -3,6 +3,8 @@
   说明:
     swipe_up和swipe_down为中文26键盘的划动数据
     下面对应的pinyin9(如果当前皮肤不是九键皮肤，就不用管)和number为中文九键和数字九键的划动数据
+
+    # 中文键盘，符号为中文符号
   格式说明:
     action: 必需， 格式同仓文档
     label:  非必需， 用于控制是否在按键上显示这个划动前景(也就是说不设置就不显示了)，可选text/systemImageName
@@ -24,25 +26,26 @@
 // }}}
 
     // 第一行{{{
-    q: { action: { character: '!' }, label: { text: '!' } },
+    q: { action: { character: '！' }, label: { text: '！' } },
     w: { action: { character: '@' }, label: { text: '@' } },
     // }}}
     
     // 第二行 {{{
-    k: { action: { character: ';' }, label: { text: ';' } },
-    l: { action: { character: "'" }, label: { text: "'" } },
+    k: { action: { character: '：' }, label: { text: '：' } },
+    l: { action: { character: '”' }, label: { text: '“' } },
+    m: { action: { character: '？' }, label: { text: '？' } },
     // }}}
 
     // 第三行 {{{
-    v: { action: { character: '(' }, label: { text: '(' } },
-    b: { action: { character: ')' }, label: { text: ')' } },
-    m: { action: { character: '/' }, label: { text: '/' } },
+    v: { action: { character: '（' }, label: { text: '（' } },
+    b: { action: { character: '）' }, label: { text: '）' } },
+    n: { action: { character: '。' }, label: { text: '。' } },
     // }}}
     
     // 第四行{{{
-    spaceRight: { action: { character: '。' } },
-    space: { action: { keyboardType: 'alphabetic' } },  // 如果你没加一个中英切换键，最好别改这个
     '123': { action: { shortcut: '#RimeSwitcher' } },
+    space: { action: { keyboardType: 'alphabetic' } },  // 如果你没加一个中英切换键，最好别改这个
+    // spaceRight: { action: { character: '。' } },
     // "backspace": {"action": { "character": "。" }, "label": {"text": "。"}},
     // "enter": {"action": { "shortcut": "#换行" }, "label": {"text": "。"}},
     // "symbol": {"action": { "character": "。" }, "label": {"text": "。"}},
@@ -53,8 +56,9 @@
   swipe_down: {
     // 第二行 {{{
     a: { action: 'tab', label: { text: 'tab' }, center: { x: 0.5, y: 0.8 } },
-    k: { action: { character: ':' }, label: { text: ':' } },
-    l: { action: { character: '"' }, label: { text: '"' } },
+    k: { action: { character: '；' }, label: { text: '；' } },
+    l: { action: { character: '’' }, label: { text: '‘' } },
+    m: { action: { character: '/' }, label: { text: '/' } },
     // }}}
 
     // 第三行 {{{
@@ -62,7 +66,7 @@
     c: { action: { shortcut: '#copy' } },
     v: { action: { shortcut: '#paste' } },
     
-    m: { action: { character: '?' }, label: { text: '?' } },
+    n: { action: { character: '，' }, label: { text: '，' } },
     // }}}
     
     // 第四行 {{{
