@@ -1,5 +1,5 @@
 local color = import 'color.libsonnet';
-local keyboarLayout(theme="light") = {
+local keyboarLayout(theme='light') = {
   '竖屏中文26键': {
     keyboardLayout: [
       {
@@ -243,6 +243,7 @@ local keyboarLayout(theme="light") = {
             { Cell: 'jButton' },
             { Cell: 'kButton' },
             { Cell: 'lButton' },
+            { Cell: 'mButton' },
           ],
         },
       },
@@ -250,13 +251,11 @@ local keyboarLayout(theme="light") = {
         HStack: {
           subviews: [
             { Cell: 'shiftButton' },
-            { Cell: 'zButton' },
             { Cell: 'xButton' },
             { Cell: 'cButton' },
             { Cell: 'vButton' },
             { Cell: 'bButton' },
             { Cell: 'nButton' },
-            { Cell: 'mButton' },
             { Cell: 'backspaceButton' },
           ],
         },
@@ -264,13 +263,13 @@ local keyboarLayout(theme="light") = {
       {
         HStack: {
           subviews: [
-            { Cell: 'symbolButton' },
             { Cell: '123Button' },
             { Cell: 'spaceButton' },
             // { Cell: 'spaceRightButton' },
             // {
             //   "Cell": "EnZhButton"
             // },
+            { Cell: 'zButton' },
             { Cell: 'enterButton' },
           ],
         },
@@ -390,7 +389,7 @@ local keyboarLayout(theme="light") = {
                   { Cell: 'spaceButton' },
                   { Cell: 'spaceRightButton' },
                   {
-                    "Cell": "EnZhButton"
+                    Cell: 'EnZhButton',
                   },
                   { Cell: 'enterButton' },
                 ],
@@ -555,14 +554,14 @@ local keyboarLayout(theme="light") = {
 
 {
   getPinyinLayout(theme, orientation):
-    if orientation=="portrait" then keyboarLayout(theme)["竖屏中文26键"]
-    else  keyboarLayout(theme)["横屏中文26键"],
+    if orientation == 'portrait' then keyboarLayout(theme)['竖屏中文26键']
+    else keyboarLayout(theme)['横屏中文26键'],
 
   getEnLayout(theme, orientation):
-    if orientation=="portrait" then keyboarLayout(theme)["竖屏英文26键"]
-    else  keyboarLayout(theme)["横屏英文26键"],
+    if orientation == 'portrait' then keyboarLayout(theme)['竖屏英文26键']
+    else keyboarLayout(theme)['横屏英文26键'],
 
   getButtonSize(theme, orientation):
-    if orientation == "portrait" then keyboarLayout(theme)["竖屏按键尺寸"]
-    else keyboarLayout(theme)["横屏按键尺寸"],
+    if orientation == 'portrait' then keyboarLayout(theme)['竖屏按键尺寸']
+    else keyboarLayout(theme)['横屏按键尺寸'],
 }

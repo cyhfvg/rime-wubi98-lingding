@@ -208,11 +208,10 @@ local keyboard(theme, orientation) =
     aButton: createButton(
       params={
         key: 'a',
-        size: std.get(ButtonSize, 'a键size'),
-        bounds: std.get(ButtonSize, 'a键bounds'),
+        size: std.get(ButtonSize, '普通键size'),
+        // bounds: std.get(ButtonSize, 'a键bounds'),
       }
     ),
-
     aButtonHintStyle: {
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'aButtonHintForegroundStyle',
@@ -312,15 +311,26 @@ local keyboard(theme, orientation) =
     lButton: createButton(
       params={
         key: 'l',
-        size: std.get(ButtonSize, 'l键size'),
-        bounds: std.get(ButtonSize, 'l键bounds'),
+        size: std.get(ButtonSize, '普通键size'),
+        // bounds: std.get(ButtonSize, 'l键bounds'),
       }
     ),
-
     lButtonHintStyle: {
       backgroundStyle: 'alphabeticHintBackgroundStyle',
       foregroundStyle: 'lButtonHintForegroundStyle',
       swipeUpForegroundStyle: 'lButtonSwipeUpHintForegroundStyle',
+    },
+
+    mButton: createButton(
+      params={
+        key: 'm',
+        size: std.get(ButtonSize, '普通键size'),
+      }
+    ),
+    mButtonHintStyle: {
+      backgroundStyle: 'alphabeticHintBackgroundStyle',
+      foregroundStyle: 'mButtonHintForegroundStyle',
+      swipeUpForegroundStyle: 'mButtonSwipeUpHintForegroundStyle',
     },
 
     shiftButton: createButton(
@@ -364,18 +374,6 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    zButton: createButton(
-      params={
-        key: 'z',
-        size: std.get(ButtonSize, '普通键size'),
-      }
-    ),
-
-    zButtonHintStyle: {
-      backgroundStyle: 'alphabeticHintBackgroundStyle',
-      foregroundStyle: 'zButtonHintForegroundStyle',
-      swipeUpForegroundStyle: 'zButtonSwipeUpHintForegroundStyle',
-    },
 
     xButton: createButton(
       params={
@@ -442,18 +440,6 @@ local keyboard(theme, orientation) =
       swipeUpForegroundStyle: 'nButtonSwipeUpHintForegroundStyle',
     },
 
-    mButton: createButton(
-      params={
-        key: 'm',
-        size: std.get(ButtonSize, '普通键size'),
-      }
-    ),
-
-    mButtonHintStyle: {
-      backgroundStyle: 'alphabeticHintBackgroundStyle',
-      foregroundStyle: 'mButtonHintForegroundStyle',
-      swipeUpForegroundStyle: 'mButtonSwipeUpHintForegroundStyle',
-    },
     backspaceButton: createButton(
       params={
         key: 'backspace',
@@ -504,7 +490,7 @@ local keyboard(theme, orientation) =
 
     '123ButtonForegroundStyle': utils.makeTextStyle(
       params={
-        text: '123',
+        text: 'Nu/Ch',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
@@ -531,38 +517,50 @@ local keyboard(theme, orientation) =
         center: center['功能键前景文字偏移'],
       }
     ),
-    spaceRightButton: createButton(
-      params={
-        key: 'spaceRight',
-        size: ButtonSize['spaceRight键size'],
-        action: { symbol: '.' },
-        backgroundStyle: 'alphabeticBackgroundStyle',
-        foregroundStyle: [
-          'spaceRightButtonForegroundStyle',
-          'spaceRightButtonForegroundStyle2',
-        ],
-        isLetter: false,
-      }
-    ),
+    //    spaceRightButton: createButton(
+    //      params={
+    //        key: 'spaceRight',
+    //        size: ButtonSize['spaceRight键size'],
+    //        action: { symbol: '.' },
+    //        backgroundStyle: 'alphabeticBackgroundStyle',
+    //        foregroundStyle: [
+    //          'spaceRightButtonForegroundStyle',
+    //          'spaceRightButtonForegroundStyle2',
+    //        ],
+    //        isLetter: false,
+    //      }
+    //    ),
+    //
+    //    spaceRightButtonForegroundStyle: utils.makeTextStyle(
+    //      params={
+    //        text: ',',
+    //        normalColor: color[theme]['按键前景颜色'],
+    //        highlightColor: color[theme]['按键前景颜色'],
+    //        fontSize: fontSize['按键前景文字大小'],
+    //        center: { x: 0.5, y: 0.34 },
+    //      }
+    //    ),
+    //    spaceRightButtonForegroundStyle2: utils.makeTextStyle(
+    //      params={
+    //        text: '.',
+    //        normalColor: color[theme]['按键前景颜色'],
+    //        highlightColor: color[theme]['按键前景颜色'],
+    //        fontSize: fontSize['按键前景文字大小'],
+    //        center: { x: 0.5, y: 0.54 },
+    //      }
+    //    ),
 
-    spaceRightButtonForegroundStyle: utils.makeTextStyle(
+    zButton: createButton(
       params={
-        text: ',',
-        normalColor: color[theme]['按键前景颜色'],
-        highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'],
-        center: { x: 0.5, y: 0.34 },
+        key: 'z',
+        size: std.get(ButtonSize, '普通键size'),
       }
     ),
-    spaceRightButtonForegroundStyle2: utils.makeTextStyle(
-      params={
-        text: '.',
-        normalColor: color[theme]['按键前景颜色'],
-        highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'],
-        center: { x: 0.5, y: 0.54 },
-      }
-    ),
+    zButtonHintStyle: {
+      backgroundStyle: 'alphabeticHintBackgroundStyle',
+      foregroundStyle: 'zButtonHintForegroundStyle',
+      swipeUpForegroundStyle: 'zButtonSwipeUpHintForegroundStyle',
+    },
 
     enterButton: createButton(
       params={
