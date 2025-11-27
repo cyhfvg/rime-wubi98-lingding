@@ -1,3 +1,5 @@
+// https://ihsiao.com/apps/hamster/docs/guides/keyboard_skins/
+
 local config = {
   author: 'cyhfvg',
   name: '灵定',

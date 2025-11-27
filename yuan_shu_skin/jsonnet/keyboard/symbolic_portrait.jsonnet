@@ -18,7 +18,15 @@ local createButton(params={}) =
     size: std.get(params, 'size'),
     bounds: std.get(params, 'bounds'),
 
-    backgroundStyle: if isLetter then 'alphabeticBackgroundStyle' else if isNumber then 'numericBackgroundStyle' else if isSymbolic then 'symbolicBackgroundStyle' else std.get(params, 'backgroundStyle', 'systemButtonBackgroundStyle'),
+    backgroundStyle:
+      if isLetter then
+        'alphabeticBackgroundStyle'
+      else if isNumber then
+        'numericBackgroundStyle'
+      else if isSymbolic then
+        'symbolicBackgroundStyle'
+      else
+        std.get(params, 'backgroundStyle', 'systemButtonBackgroundStyle'),
 
     foregroundStyle: std.get(params, 'foregroundStyle', params.key + 'ButtonForegroundStyle'),
 
@@ -89,6 +97,7 @@ local keyboard(theme) =
         {
           HStack: {
             subviews: [
+              { Cell: 'shift_Button' },
               { Cell: 'less_than_sign_Button' },
               { Cell: 'greater_than_sign_Button' },
               { Cell: 'comma_Button' },
@@ -421,7 +430,8 @@ local keyboard(theme) =
 
     percent_sign_Button: createButton(
       params={
-        key: '%',
+        key: 'percent_sign',
+        action: { character: '%' },
         size: std.get(ButtonSize, '普通键size'),
         isNumber: false,
         isLetter: false,
@@ -573,7 +583,8 @@ local keyboard(theme) =
 
     left_braces_Button: createButton(
       params={
-        key: '{',
+        key: 'left_braces',
+        action: { character: '{' },
         size: std.get(ButtonSize, '普通键size'),
         isNumber: false,
         isLetter: false,
@@ -720,6 +731,23 @@ local keyboard(theme) =
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
+      }
+    ),
+
+    shift_Button: createButton(
+      params={
+        key: 'shift',
+        action: { shortcutCommand: '#中英切换' },
+        size: std.get(ButtonSize, 'shift键size'),
+        isLetter: false,
+      },
+    ),
+    shiftButtonForegroundStyle: utils.makeSystemImageStyle(
+      params={
+        systemImageName: 'shift',
+        normalColor: color[theme]['按键前景颜色'],
+        highlightColor: color[theme]['按键前景颜色'],
+        fontSize: fontSize['按键前景文字大小'],
       }
     ),
 

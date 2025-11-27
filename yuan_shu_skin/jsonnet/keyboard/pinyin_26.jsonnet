@@ -18,7 +18,7 @@ local swipeStyles = import '../lib/swipeStyles2.libsonnet';
 // 划动以及长按数据
 local swipe_up = std.get(swipeData, 'swipe_up', {});
 local swipe_down = std.get(swipeData, 'swipe_down', {});
-local hintSymbolsData = std.get(_hintSymbolsData, "pinyin", {});
+local hintSymbolsData = std.get(_hintSymbolsData, 'pinyin', {});
 
 local createButton(params={}) =
   local isLetter = std.get(params, 'isLetter', true);
@@ -459,32 +459,33 @@ local keyboard(theme, orientation) =
       }
     ),
 
-// symbolButton 不需要，暂时保留原配置 {{{1
-//    symbolButton: createButton(
-//      params={
-//        key: 'symbol',
-//        size: ButtonSize['symbol键size'],
-//        action: { keyboardType: 'symbolic' },
-//        isLetter: false,
-//      }
-//    ),
-//
-//    symbolButtonForegroundStyle: utils.makeTextStyle(
-//      params={
-//        text: '#+=',
-//        normalColor: color[theme]['按键前景颜色'],
-//        highlightColor: color[theme]['按键前景颜色'],
-//        fontSize: fontSize['按键前景文字大小'] - 3,
-//        center: center['功能键前景文字偏移'] { y: 0.5 },
-//      }
-//    ),
-// }}}
+    // symbolButton 不需要，暂时保留原配置 {{{1
+    //    symbolButton: createButton(
+    //      params={
+    //        key: 'symbol',
+    //        size: ButtonSize['symbol键size'],
+    //        action: { keyboardType: 'symbolic' },
+    //        isLetter: false,
+    //      }
+    //    ),
+    //
+    //    symbolButtonForegroundStyle: utils.makeTextStyle(
+    //      params={
+    //        text: '#+=',
+    //        normalColor: color[theme]['按键前景颜色'],
+    //        highlightColor: color[theme]['按键前景颜色'],
+    //        fontSize: fontSize['按键前景文字大小'] - 3,
+    //        center: center['功能键前景文字偏移'] { y: 0.5 },
+    //      }
+    //    ),
+    // }}}
 
     '123Button': createButton(
       params={
         key: '123',
         size: ButtonSize['123键size'],
-        action: { keyboardType: if orientation == 'portrait' then 'numeric' else 'symbolic' },
+        // action: { keyboardType: if orientation == 'portrait' then 'numeric' else 'symbolic' },
+        action: { keyboardType: 'symbolic' },
         isLetter: false,
       }
     ),
@@ -561,7 +562,7 @@ local keyboard(theme, orientation) =
     ),
 
     spaceRightButtonForegroundStyle: utils.makeTextStyle(
-      params = {
+      params={
         text: '，',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
@@ -571,7 +572,7 @@ local keyboard(theme, orientation) =
     ),
 
     spaceRightButtonForegroundStyle2: utils.makeTextStyle(
-      params = {
+      params={
         text: '。',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
