@@ -1,5 +1,5 @@
 local color = import 'color.libsonnet';
-local keyboarLayout(theme='light') = {
+local keyboardLayout(theme='light') = {
   '竖屏中文26键': {
     keyboardLayout: [
       {
@@ -550,18 +550,53 @@ local keyboarLayout(theme='light') = {
       width: '173/784',
     },
   },
+
+  'symbolic按键尺寸': {
+
+    '普通键size': {
+      width: {
+        percentage: 0.1,
+      },
+    },
+
+    '返回键size': {
+      width: {
+        percentage: 0.2,
+      },
+    },
+
+    'backspace键size': {
+      width: {
+        percentage: 0.10,
+      },
+    },
+
+    'space键size': {
+      width: {
+        percentage: 0.2,
+      },
+    },
+    'enter键size': {
+      width: {
+        percentage: 0.2,
+      },
+    },
+  },
 };
 
 {
   getPinyinLayout(theme, orientation):
-    if orientation == 'portrait' then keyboarLayout(theme)['竖屏中文26键']
-    else keyboarLayout(theme)['横屏中文26键'],
+    if orientation == 'portrait' then keyboardLayout(theme)['竖屏中文26键']
+    else keyboardLayout(theme)['横屏中文26键'],
 
   getEnLayout(theme, orientation):
-    if orientation == 'portrait' then keyboarLayout(theme)['竖屏英文26键']
-    else keyboarLayout(theme)['横屏英文26键'],
+    if orientation == 'portrait' then keyboardLayout(theme)['竖屏英文26键']
+    else keyboardLayout(theme)['横屏英文26键'],
 
   getButtonSize(theme, orientation):
-    if orientation == 'portrait' then keyboarLayout(theme)['竖屏按键尺寸']
-    else keyboarLayout(theme)['横屏按键尺寸'],
+    if orientation == 'portrait' then keyboardLayout(theme)['竖屏按键尺寸']
+    else keyboardLayout(theme)['横屏按键尺寸'],
+
+  getSymbolicButtonSize(theme):
+    keyboardLayout(theme)['symbolic按键尺寸'],
 }
