@@ -11,13 +11,13 @@
     a: {
       selectedIndex: 0,
       list: [
-        { action: { shortcut: '#左手模式' }, label: { text: 'left' }, fontSize: 16 },
+        { action: { shortcut: '#左手模式' }, label: { text: 'L' }, fontSize: 16 },
       ],
     },
     m: {
       selectedIndex: 0,
       list: [
-        { action: { shortcut: '#右手模式' }, label: { text: 'right' }, fontSize: 16 },
+        { action: { shortcut: '#右手模式' }, label: { text: 'R' }, fontSize: 16 },
       ],
     },
     // }}}
@@ -26,19 +26,19 @@
     v: {
       selectedIndex: 0,
       list: [
-        {'action': { 'symbol': '(' }, 'label': { 'text': '(' }, 'processByRIME': 'true'},
-        {'action': { 'symbol': '[' }, 'label': { 'text': '[' }, 'processByRIME': 'true'},
-        {'action': { 'symbol': '{' }, 'label': { 'text': '{' }, 'processByRIME': 'true'},
-        {'action': { 'symbol': '<' }, 'label': { 'text': '<' }, 'processByRIME': 'true'},
+        { action: { symbol: '(' }, label: { text: '(' }, processByRIME: 'true' },
+        { action: { symbol: '[' }, label: { text: '[' }, processByRIME: 'true' },
+        { action: { symbol: '{' }, label: { text: '{' }, processByRIME: 'true' },
+        { action: { symbol: '<' }, label: { text: '<' }, processByRIME: 'true' },
       ],
     },
     b: {
       selectedIndex: 1,
       list: [
-        {'action': { 'symbol': ')' }, 'label': { 'text': ')' }, 'processByRIME': 'true'},
-        {'action': { 'symbol': ']' }, 'label': { 'text': ']' }, 'processByRIME': 'true'},
-        {'action': { 'symbol': '}' }, 'label': { 'text': '}' }, 'processByRIME': 'true'},
-        {'action': { 'symbol': '>' }, 'label': { 'text': '>' }, 'processByRIME': 'true'},
+        { action: { symbol: ')' }, label: { text: ')' }, processByRIME: 'true' },
+        { action: { symbol: ']' }, label: { text: ']' }, processByRIME: 'true' },
+        { action: { symbol: '}' }, label: { text: '}' }, processByRIME: 'true' },
+        { action: { symbol: '>' }, label: { text: '>' }, processByRIME: 'true' },
       ],
     },
     // }}}
