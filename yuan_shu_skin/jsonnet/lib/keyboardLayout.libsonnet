@@ -567,7 +567,13 @@ local keyboardLayout(theme='light') = {
 
     'shift键size': {
       width: {
-        percentage: 0.20,
+        percentage: 0.10,
+      },
+    },
+
+    'lock键size': {
+      width: {
+        percentage: 0.10,
       },
     },
 

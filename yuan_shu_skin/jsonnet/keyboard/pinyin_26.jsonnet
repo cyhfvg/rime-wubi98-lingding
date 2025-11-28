@@ -604,12 +604,12 @@ local keyboard(theme, orientation) =
     ) + {
       backgroundStyle: [
         {
-          styleName: 'enterButtonGreyBackgroundStyle',
+          styleName: 'systemButtonBackgroundStyle',
           conditionKey: '$returnKeyType',
           conditionValue: [0, 2, 3, 5, 8, 10, 11],
         },
         {
-          styleName: 'systemButtonBackgroundStyle',
+          styleName: 'enterButtonBlueBackgroundStyle',
           conditionKey: '$returnKeyType',
           conditionValue: [1, 4, 6, 7, 9],
         },
@@ -700,18 +700,18 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    // TODO: 更改回车键的颜色
-    enterButtonGreyBackgroundStyle: utils.makeGeometryStyle(
-      params={
-        buttonStyleType: 'geometry',
-        insets: { top: 5, left: 3, bottom: 5, right: 3 },
-        normalColor: color[theme]['按键前景颜色'],
-        highlightColor: color[theme]['按键前景颜色'],
-        cornerRadius: 7,
-        normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
-        highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
-      }
-    ),
+    //    // TODO: 更改回车键的颜色； 暂时不变更，先用模板的样式
+    //    enterButtonGreyBackgroundStyle: utils.makeGeometryStyle(
+    //      params={
+    //        buttonStyleType: 'geometry',
+    //        insets: { top: 5, left: 3, bottom: 5, right: 3 },
+    //        normalColor: color[theme]['按键前景颜色'],
+    //        highlightColor: color[theme]['按键前景颜色'],
+    //        cornerRadius: 7,
+    //        normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
+    //        highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
+    //      }
+    //    ),
 
     enterButtonBlueBackgroundStyle: utils.makeGeometryStyle(
       params={

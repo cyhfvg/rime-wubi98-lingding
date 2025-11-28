@@ -98,6 +98,7 @@ local keyboard(theme) =
           HStack: {
             subviews: [
               { Cell: 'shift_Button' },
+              { Cell: 'lock_Button' },
               { Cell: 'less_than_sign_Button' },
               { Cell: 'greater_than_sign_Button' },
               { Cell: 'comma_Button' },
@@ -750,6 +751,46 @@ local keyboard(theme) =
         fontSize: fontSize['按键前景文字大小'],
       }
     ),
+    lock_Button: createButton(
+      params={
+        key: 'lock',
+        size: std.get(ButtonSize, 'lock键size'),
+        foregroundStyle: [
+          {
+            styleName: 'unlock_ButtonForegroundStyle',
+            conditionKey: '$symbolicKeyboardLockState',
+            conditionValue: false,
+          },
+          {
+            styleName: 'lock_ButtonForegroundStyle',
+            conditionKey: '$symbolicKeyboardLockState',
+            conditionValue: true,
+          },
+        ],
+        action: 'symbolicKeyboardLockStateToggle',
+        isNumber: false,
+        isLetter: false,
+        isSymbolic: false,
+      }
+    ),
+    lock_ButtonForegroundStyle: utils.makeSystemImageStyle(
+      params={
+        systemImageName: 'lock',
+        normalColor: color[theme]['按键前景颜色'],
+        highlightColor: color[theme]['按键前景颜色'],
+        fontSize: fontSize['按键前景sf符号大小'],
+        center: { y: 0.53 },
+      }
+    ),
+    unlock_ButtonForegroundStyle: utils.makeSystemImageStyle(
+      params={
+        systemImageName: 'lock.open',
+        normalColor: color[theme]['按键前景颜色'],
+        highlightColor: color[theme]['按键前景颜色'],
+        fontSize: fontSize['按键前景sf符号大小'],
+        center: { y: 0.53 },
+      }
+    ),
 
     less_than_sign_Button: createButton(
       params={
@@ -895,7 +936,7 @@ local keyboard(theme) =
     ),
     symbolreturnButtonForegroundStyle: utils.makeTextStyle(
       params={
-        text: 'back',
+        text: 'Back',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
@@ -1072,7 +1113,7 @@ local keyboard(theme) =
 
     enterButtonForegroundStyle0: utils.makeTextStyle(
       params={
-        text: '回车',
+        text: 'Return',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
@@ -1081,7 +1122,7 @@ local keyboard(theme) =
     ),
     enterButtonForegroundStyle6: utils.makeTextStyle(
       params={
-        text: '搜索',
+        text: 'Search',
         normalColor: color[theme]['长按选中字体颜色'],
         highlightColor: color[theme]['长按非选中字体颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
@@ -1091,7 +1132,7 @@ local keyboard(theme) =
 
     enterButtonForegroundStyle7: utils.makeTextStyle(
       params={
-        text: '发送',
+        text: 'Send',
         normalColor: color[theme]['长按选中字体颜色'],
         highlightColor: color[theme]['长按非选中字体颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
@@ -1101,7 +1142,7 @@ local keyboard(theme) =
 
     enterButtonForegroundStyle14: utils.makeTextStyle(
       params={
-        text: '前往',
+        text: 'Go',
         normalColor: color[theme]['长按选中字体颜色'],
         highlightColor: color[theme]['长按非选中字体颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
@@ -1111,7 +1152,7 @@ local keyboard(theme) =
 
     enterButtonForegroundStyle9: utils.makeTextStyle(
       params={
-        text: '完成',
+        text: 'Done',
         normalColor: color[theme]['长按选中字体颜色'],
         highlightColor: color[theme]['长按非选中字体颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,

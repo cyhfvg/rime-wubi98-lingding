@@ -483,7 +483,7 @@ local keyboard(theme, orientation) =
       params={
         key: '123',
         size: ButtonSize['123键size'],
-        action: { keyboardType: if orientation == 'portrait' then 'numeric' else 'symbolic' },
+        action: { keyboardType: 'symbolic' },
         isLetter: false,
       }
     ),
