@@ -547,40 +547,6 @@ local keyboard(theme, orientation) =
       highlightColor: color[theme]['划动字符颜色'],
     }),
 
-    spaceRightButton: createButton(
-      params={
-        key: 'spaceRight',
-        size: ButtonSize['spaceRight键size'],
-        action: { character: '，' },
-        backgroundStyle: 'alphabeticBackgroundStyle',
-        foregroundStyle: [
-          'spaceRightButtonForegroundStyle',
-          'spaceRightButtonForegroundStyle2',
-        ],
-        isLetter: false,
-      }
-    ),
-
-    spaceRightButtonForegroundStyle: utils.makeTextStyle(
-      params={
-        text: '，',
-        normalColor: color[theme]['按键前景颜色'],
-        highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'],
-        center: { x: 0.64, y: 0.45 },
-      }
-    ),
-
-    spaceRightButtonForegroundStyle2: utils.makeTextStyle(
-      params={
-        text: '。',
-        normalColor: color[theme]['按键前景颜色'],
-        highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'] - 2,
-        center: { x: 0.6, y: 0.3 },
-      }
-    ),
-
     zButton: createButton(
       params={
         key: 'z',

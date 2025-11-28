@@ -109,7 +109,6 @@ local keyboardLayout(theme='light') = {
               HStack: {
                 subviews: [
                   { Cell: 'shiftButton' },
-                  { Cell: 'zButton' },
                   { Cell: 'xButton' },
                   { Cell: 'cButton' },
                   { Cell: 'vButton' },
@@ -119,7 +118,6 @@ local keyboardLayout(theme='light') = {
             {
               HStack: {
                 subviews: [
-                  { Cell: 'symbolButton' },
                   { Cell: '123Button' },
                   { Cell: 'spaceButton' },
                 ],
@@ -151,11 +149,11 @@ local keyboardLayout(theme='light') = {
             {
               HStack: {
                 subviews: [
-                  { Cell: 'gButton' },
                   { Cell: 'hButton' },
                   { Cell: 'jButton' },
                   { Cell: 'kButton' },
                   { Cell: 'lButton' },
+                  { Cell: 'mButton' },
                 ],
               },
             },
@@ -165,7 +163,6 @@ local keyboardLayout(theme='light') = {
                   { Cell: 'vButton' },
                   { Cell: 'bButton' },
                   { Cell: 'nButton' },
-                  { Cell: 'mButton' },
                   { Cell: 'backspaceButton' },
                 ],
               },
@@ -174,7 +171,7 @@ local keyboardLayout(theme='light') = {
               HStack: {
                 subviews: [
                   { Cell: 'spaceButton' },
-                  { Cell: 'spaceRightButton' },
+                  { Cell: 'zButton' },
                   { Cell: 'enterButton' },
                 ],
               },
@@ -322,7 +319,6 @@ local keyboardLayout(theme='light') = {
               HStack: {
                 subviews: [
                   { Cell: 'shiftButton' },
-                  { Cell: 'zButton' },
                   { Cell: 'xButton' },
                   { Cell: 'cButton' },
                   { Cell: 'vButton' },
@@ -332,7 +328,6 @@ local keyboardLayout(theme='light') = {
             {
               HStack: {
                 subviews: [
-                  { Cell: 'symbolButton' },
                   { Cell: '123Button' },
                   { Cell: 'spaceButton' },
                 ],
@@ -364,11 +359,11 @@ local keyboardLayout(theme='light') = {
             {
               HStack: {
                 subviews: [
-                  { Cell: 'gButton' },
                   { Cell: 'hButton' },
                   { Cell: 'jButton' },
                   { Cell: 'kButton' },
                   { Cell: 'lButton' },
+                  { Cell: 'mButton' },
                 ],
               },
             },
@@ -378,7 +373,6 @@ local keyboardLayout(theme='light') = {
                   { Cell: 'vButton' },
                   { Cell: 'bButton' },
                   { Cell: 'nButton' },
-                  { Cell: 'mButton' },
                   { Cell: 'backspaceButton' },
                 ],
               },
@@ -387,10 +381,7 @@ local keyboardLayout(theme='light') = {
               HStack: {
                 subviews: [
                   { Cell: 'spaceButton' },
-                  { Cell: 'spaceRightButton' },
-                  {
-                    Cell: 'EnZhButton',
-                  },
+                  { Cell: 'zButton' },
                   { Cell: 'enterButton' },
                 ],
               },
@@ -538,16 +529,13 @@ local keyboardLayout(theme='light') = {
       width: '173/784',
     },
     '123键size': {
-      width: '173/784',
+      width: '200/784',
     },
     'space键size': {
       width: '438/784',
     },
-    'spaceRight键size': {
-      width: '173/784',
-    },
     'enter键size': {
-      width: '173/784',
+      width: '200/784',
     },
   },
 
