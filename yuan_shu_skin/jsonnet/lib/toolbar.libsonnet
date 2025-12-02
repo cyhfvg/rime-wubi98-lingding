@@ -39,6 +39,10 @@ local getToolBar(theme) = {
           // { Cell: 'toolbarEmojiButton' },
 
           // { Cell: 'toolbarScriptButton' },
+          // 主按钮，美化
+          { Cell: 'toolbarMainButton' },
+          // 占位空按钮
+          { Cell: 'toolbarPlaceholderButton' },
           // 方案选择
           { Cell: 'toolbarSwitchButton' },
           // 短语
@@ -64,10 +68,39 @@ local getToolBar(theme) = {
     highlightColor: '#00000001',
   },
 
-  // 占位空按键
-  toolbarPlaceholderButton: {
+  // 工具栏主按钮，无功能，仅做美化
+  toolbarMainButton: {
+    backgroundStyle: 'toolbarButtonBackgroundStyle',
+    foregroundStyle: 'toolbarMainButtonForegroundStyle',
+    // action: { shortcutCommand: '#noop' },
+  },
+  toolbarMainButtonForegroundStyle: {
+    buttonStyleType: 'systemImage',
+    systemImageName: 'chevron.right.square',
+    normalColor: color[theme]['toolbar按键颜色'],
+    highlightColor: color[theme]['toolbar按键颜色'],
+    fontSize: fontSize['toolbar按键前景sf符号大小'],
+    center: center['toolbar按键文字偏移'],
+    alignment: 'left',
   },
 
+  // 占位空按键
+  toolbarPlaceholderButton: {
+    backgroundStyle: 'toolbarButtonBackgroundStyle',
+    foregroundStyle: 'toolbarPlaceholderButtonForegroundStyle',
+    // 不需要action， 仅做占位
+    // action: { shortcutCommand: '#noop', },
+  },
+  toolbarPlaceholderButtonForegroundStyle: {
+    buttonStyleType: 'text',
+    text: '',
+    normalColor: color[theme]['toolbar按键颜色'],
+    highlightColor: color[theme]['toolbar按键颜色'],
+    fontSize: fontSize['toolbar按键前景文字大小'],
+    center: center['toolbar按键文字偏移'],
+    fontWeight: 'medium',
+    alignment: 'right',
+  },
 
   toolbarPhraseeButton: {
     backgroundStyle: 'toolbarButtonBackgroundStyle',
@@ -244,26 +277,6 @@ local getToolBar(theme) = {
       },
     },
   ],
-  // verticalCandidatesLayout: [
-  //   {
-  //     HStack: {
-  //       subviews: [
-  //         { Cell: 'verticalCandidates' },
-  //       ],
-  //     },
-  //   },
-  //   {
-  //     HStack: {
-  //       style: 'HStackStyle',
-  //       subviews: [
-  //         { Cell: 'verticalCandidatePageUpButton' },
-  //         { Cell: 'verticalCandidatePageDownButton' },
-  //         { Cell: 'verticalCandidateReturnButton' },
-  //         { Cell: 'verticalCandidateBackspaceButton' },
-  //       ],
-  //     },
-  //   },
-  // ],
   HStackStyle: {
     size: {
       height: '1/5',
