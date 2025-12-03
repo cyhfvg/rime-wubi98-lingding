@@ -439,6 +439,27 @@ local keyboard(theme, orientation) =
       swipeUpForegroundStyle: 'nButtonSwipeUpHintForegroundStyle',
     },
 
+    '^_^Button': createButton(
+      params={
+        key: '^_^',
+        size: std.get(ButtonSize, '普通键size'),
+      }
+    ),
+    '^_^ButtonHintStyle': {
+      backgroundStyle: 'alphabeticHintBackgroundStyle',
+      foregroundStyle: '^_^ButtonHintForegroundStyle',
+      //swipeUpForegroundStyle: '^_^ButtonSwipeUpHintForegroundStyle',
+    },
+    '^_^ButtonForegroundStyle': utils.makeTextStyle(
+      params={
+        text: '^_^',
+        normalColor: color[theme]['按键前景颜色'],
+        highlightColor: color[theme]['按键前景颜色'],
+        fontSize: fontSize['按键前景文字大小'] - 3,
+        center: center['功能键前景文字偏移'] { y: 0.5 },
+      }
+    ),
+
     backspaceButton: createButton(
       params={
         key: 'backspace',

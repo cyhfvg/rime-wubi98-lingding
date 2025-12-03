@@ -44,6 +44,7 @@ local keyboardLayout(theme='light') = {
             { Cell: 'vButton' },
             { Cell: 'bButton' },
             { Cell: 'nButton' },
+            { Cell: '^_^Button' },
             // { Cell: 'mButton' },
             { Cell: 'backspaceButton' },
           ],
@@ -253,6 +254,7 @@ local keyboardLayout(theme='light') = {
             { Cell: 'vButton' },
             { Cell: 'bButton' },
             { Cell: 'nButton' },
+            { Cell: '^_^Button' },
             { Cell: 'backspaceButton' },
           ],
         },
@@ -457,7 +459,7 @@ local keyboardLayout(theme='light') = {
     },
     'backspace键size': {
       width: {
-        percentage: 0.30,
+        percentage: 0.20,
       },
     },
     'symbol键size': {

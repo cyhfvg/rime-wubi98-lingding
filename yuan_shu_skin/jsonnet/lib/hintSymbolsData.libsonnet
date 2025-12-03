@@ -41,6 +41,14 @@
         { action: { symbol: '>' }, label: { text: '>' }, processByRIME: 'true' },
       ],
     },
+
+    '^_^': {
+      selectedIndex: 0,
+      list: [
+        { action: { symbol: '~' }, label: { text: '~' }, processByRIME: 'true' },
+        { action: { symbol: '`' }, label: { text: '`' }, processByRIME: 'true' },
+      ],
+    },
     // }}}
 
     // 第四行 {{{4
