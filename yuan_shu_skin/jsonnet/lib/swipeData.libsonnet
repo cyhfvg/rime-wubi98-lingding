@@ -13,35 +13,35 @@
   */
 
   swipe_up: {
-// 示例 {{{1
-//    q: {
-//      action: { character: '!' },
-//      label: { text: '!' },
-//      // 单独对某个键的划动前景颜色设置示例
-//      color: {
-//        light: { normalColor: '#121212', highlightColor: '#121212' },
-//        dark: { normalColor: '#E5C07B', highlightColor: '#E5C07B' },
-//      },
-//    },
-// }}}
+    // 示例 {{{1
+    //    q: {
+    //      action: { character: '!' },
+    //      label: { text: '!' },
+    //      // 单独对某个键的划动前景颜色设置示例
+    //      color: {
+    //        light: { normalColor: '#121212', highlightColor: '#121212' },
+    //        dark: { normalColor: '#E5C07B', highlightColor: '#E5C07B' },
+    //      },
+    //    },
+    // }}}
 
     // 第一行{{{
-    q: { action: { character: '！' }, label: { text: '！' } },
-    w: { action: { character: '@' }, label: { text: '@' } },
+    q: { action: { symbol: '！' }, label: { text: '！' }, processByRIME: 'false' },
+    w: { action: { symbol: '@' }, label: { text: '@' }, processByRIME: 'false' },
     // }}}
-    
+
     // 第二行 {{{
-    k: { action: { character: '：' }, label: { text: '：' } },
-    l: { action: { character: '”' }, label: { text: '“' } },
-    m: { action: { character: '？' }, label: { text: '？' } },
+    k: { action: { symbol: '：' }, label: { text: '：' }, processByRIME: 'false' },
+    l: { action: { symbol: '”' }, label: { text: '“' }, processByRIME: 'false' },
+    m: { action: { symbol: '？' }, label: { text: '？' }, processByRIME: 'false' },
     // }}}
 
     // 第三行 {{{
-    v: { action: { character: '（' }, label: { text: '（' } },
-    b: { action: { character: '）' }, label: { text: '）' } },
-    n: { action: { character: '。' }, label: { text: '。' } },
+    v: { action: { symbol: '（' }, label: { text: '（' }, processByRIME: 'false' },
+    b: { action: { symbol: '）' }, label: { text: '）' }, processByRIME: 'false' },
+    n: { action: { symbol: '。' }, label: { text: '。' }, processByRIME: 'false' },
     // }}}
-    
+
     // 第四行{{{
     '123': { action: { shortcut: '#RimeSwitcher' } },
     space: { action: { keyboardType: 'alphabetic' } },  // 如果你没加一个中英切换键，最好别改这个
@@ -55,20 +55,19 @@
 
   swipe_down: {
     // 第二行 {{{
-    a: { action: 'tab', label: { text: 'tab' }, center: { x: 0.5, y: 0.8 } },
-    k: { action: { character: '；' }, label: { text: '；' } },
-    l: { action: { character: '’' }, label: { text: '‘' } },
-    m: { action: { character: '/' }, label: { text: '/' } },
+    a: { action: 'tab', label: { text: 'tab' }, center: { x: 0.5, y: 0.8 }, processByRIME: 'false' },
+    k: { action: { symbol: '；' }, label: { text: '；' }, processByRIME: 'false' },
+    l: { action: { symbol: '’' }, label: { text: '‘' }, processByRIME: 'false' },
+    m: { action: { symbol: '/' }, label: { text: '/' }, processByRIME: 'false' },
     // }}}
 
     // 第三行 {{{
     x: { action: { shortcut: '#cut' } },
     c: { action: { shortcut: '#copy' } },
     v: { action: { shortcut: '#paste' } },
-    
-    n: { action: { character: '，' }, label: { text: '，' } },
+    n: { action: { symbol: '，' }, label: { text: '，' }, processByRIME: 'false' },
     // }}}
-    
+
     // 第四行 {{{
     '123': { action: { shortcut: '#方案切换' } },
     // }}}

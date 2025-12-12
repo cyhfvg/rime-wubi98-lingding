@@ -4,20 +4,20 @@ local custom = {  // 同字母但是不同设置的，在这里加上，会覆�
   swipe_up: {
     // action同仓皮肤定义，label可选text/systemImageName, 具体见仓皮肤文档，若不想显示，可设置为text: ""
     // 第一行 {{{1
-    q: { action: { symbol: '!' }, label: { text: '!' } },
-    w: { action: { symbol: '@' }, label: { text: '@' } },
+    q: { action: { symbol: '!' }, label: { text: '!' }, processByRIME: 'false' },
+    w: { action: { symbol: '@' }, label: { text: '@' }, processByRIME: 'false' },
     // }}}
 
     // 第二行 {{{2
-    k: { action: { symbol: ':' }, label: { text: ':' } },
-    l: { action: { symbol: '"' }, label: { text: '"' } },
-    m: { action: { symbol: '?' }, label: { text: '?' } },
+    k: { action: { symbol: ':' }, label: { text: ':' }, processByRIME: 'false' },
+    l: { action: { symbol: '"' }, label: { text: '"' }, processByRIME: 'false' },
+    m: { action: { symbol: '?' }, label: { text: '?' }, processByRIME: 'false' },
     // }}}
 
     // 第三行 {{{3
-    v: { action: { character: '(' }, label: { text: '(' } },
-    b: { action: { character: '(' }, label: { text: ')' } },
-    n: { action: { character: '.' }, label: { text: '.' } },
+    v: { action: { symbol: '(' }, label: { text: '(' }, processByRIME: 'false' },
+    b: { action: { symbol: ')' }, label: { text: ')' }, processByRIME: 'false' },
+    n: { action: { symbol: '.' }, label: { text: '.' }, processByRIME: 'false' },
     // }}}
 
     space: { action: { keyboardType: 'pinyin' } },
@@ -25,10 +25,10 @@ local custom = {  // 同字母但是不同设置的，在这里加上，会覆�
   swipe_down: {
 
     // 第二行 {{{2
-    a: { action: 'tab', label: { text: 'tab' }, center: { x: 0.5, y: 0.8 } },
-    k: { action: { symbol: ';' }, label: { text: ';' } },
-    l: { action: { symbol: "'" }, label: { text: "'" } },
-    m: { action: { symbol: '/' }, label: { text: '/' } },
+    a: { action: 'tab', label: { text: 'tab' }, center: { x: 0.5, y: 0.8 }, processByRIME: 'false' },
+    k: { action: { symbol: ';' }, label: { text: ';' }, processByRIME: 'false' },
+    l: { action: { symbol: "'" }, label: { text: "'" }, processByRIME: 'false' },
+    m: { action: { symbol: '/' }, label: { text: '/' }, processByRIME: 'false' },
     // }}}
 
     // 第三行 {{{3
@@ -36,7 +36,7 @@ local custom = {  // 同字母但是不同设置的，在这里加上，会覆�
     c: { action: { shortcut: '#copy' } },
     v: { action: { shortcut: '#paste' } },
 
-    n: { action: { character: ',' }, label: { text: ',' } },
+    n: { action: { symbol: ',' }, label: { text: ',' }, processByRIME: 'false' },
     // }}}
 
   },
