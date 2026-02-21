@@ -24,7 +24,7 @@
 
     // 第三行 {{{3
     v: {
-      selectedIndex: 0,
+      selectedIndex: 1,
       list: [
         { action: { symbol: '(' }, label: { text: '(' }, processByRIME: 'true' },
         { action: { symbol: '[' }, label: { text: '[' }, processByRIME: 'true' },
